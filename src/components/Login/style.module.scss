@@ -1,0 +1,16 @@
+@import '@styles/mixin.module.scss';
+@import '@styles/variable.module.scss';
+
+.container {
+    @include flex_box_custom(center, center, 0);
+    flex-direction: column;
+    margin: 20px 0;
+    height: 90%;
+    .containerForm {
+        @include flex_box_custom(center, center, 0);
+        flex-direction: column;
+    }
+    .title {
+        font-size: 20px;
+    }
+}

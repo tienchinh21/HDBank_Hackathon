@@ -1,0 +1,61 @@
+@import '@styles/mixin.module.scss';
+@import '@styles/variable.module.scss';
+
+
+.container {
+    @include flex_box_custom(center, center, 0);
+    flex-direction: column;
+    margin: 30px 0;
+
+    .title {
+        font-size: 40px;
+        padding: 30px 0;
+    }
+
+    .listNav {
+        @include flex_box_custom(center, center, 0);
+        margin-bottom: 48px;
+
+        a {
+            background: #fff;
+            border: 1.4px solid #b1b5c9;
+            border-radius: 0 12px 12px 0;
+            box-sizing: border-box;
+            color: #333;
+            font-size: 1.225rem;
+            font-weight: 800;
+            line-height: 29px;
+            padding: 14px 50.4px;
+            transition: all .5s ease-in-out;
+        }
+
+        li:first-child a {
+            border-radius: 12px 0 0 12px;
+        }
+    }
+
+    .listProduct {
+        @include flex_box_custom(space-between, center, 0);
+
+        .itemProduct {
+            flex: 0 1 14.2857142857%;
+            height: 163px;
+            text-align: center;
+
+            .icon {
+                height: 83px;
+                margin: 16px auto;
+                width: 83px;
+            }
+
+            p {
+                margin: 0;
+                padding: 0 25px;
+                font-size: 16px;
+                color: #333;
+                font-weight: 500;
+            }
+        }
+
+    }
+}

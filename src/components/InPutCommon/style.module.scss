@@ -1,0 +1,52 @@
+.container {
+    margin-bottom: 15px;
+    width: 100%;
+
+    .labelInput {
+        font-size: 12px;
+        color: #222;
+        margin-bottom: 5px;
+        text-align: left;
+    }
+
+    .customInput {
+        width: 400px;
+        padding: 10px 15px;
+        font-size: 16px;
+        color: #333;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .customInput:hover {
+        border-color: #888;
+    }
+
+    .customInput:focus {
+        outline: none;
+        border-color: #007BFF;
+        box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+    }
+
+    .customInput::placeholder {
+        color: #aaa;
+        font-style: italic;
+    }
+
+        .boxIcon{
+            position: absolute;
+            top: 33px;
+            right: 11px;
+            cursor: pointer;
+        }
+
+        .errMsg {
+            font-size: 12px;
+            color: red;
+        }
+    }

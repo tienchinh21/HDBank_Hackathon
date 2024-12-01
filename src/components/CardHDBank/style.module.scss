@@ -1,0 +1,183 @@
+@import '@styles/mixin.module.scss';
+@import '@styles/variable.module.scss';
+
+.containerWrapper {
+    background-image: url(https://hdbank.com.vn/asset/images/bg-1.jpg);
+    background-size: cover;
+    background-position: center center;
+    padding: 20px 0;
+
+    .titleSmall {
+        text-align: center;
+        font-size: 30px;
+        font-weight: 800;
+        color: #fff;
+        padding: 20px 0;
+        margin: 0;
+    }
+
+    .btnViewAll {
+        @include flex_box_custom(space-between, center, 0);
+        border-radius: 50px;
+        box-sizing: border-box;
+        color: #fff;
+        flex-direction: row;
+        font-size: 16px;
+        height: 40px;
+        line-height: 23px;
+        margin: 32px auto 0;
+        padding: 8px 24px;
+        position: relative;
+        transition: all .3s ease-in-out;
+        width: max-content;
+
+        &:hover {
+            background: #fff;
+            color: #000;
+
+            .iconBtnViewAll {
+                transform: rotate(-30deg);
+            }
+        }
+
+        .iconBtnViewAll {
+            font-size: 1.125rem;
+            font-weight: 700;
+            margin-left: 20px;
+            transition: transform 0.3s ease-in-out;
+        }
+    }
+
+    .container {
+        @include flex_box_custom(center, center, 20px);
+
+        .slideCard {
+            backdrop-filter: blur(20px);
+            background: linear-gradient(0deg, hsla(0, 0%, 100%, .15), hsla(0, 0%, 100%, .15));
+            border: 1px solid hsla(0, 0%, 100%, .35);
+            border-radius: 20px;
+            box-sizing: border-box;
+            cursor: pointer;
+            flex: 1 0 33.333%;
+            max-width: 33.33333%;
+            position: relative;
+            transition: background .3s ease-out;
+            width: 100%;
+
+            &:hover {
+                background: hsla(0, 0%, 100%, .4);
+
+                img {
+                    transform: scale(1.05);
+                    transition: all .3s ease-in-out;
+                }
+            }
+
+            a {
+                text-align: center;
+            }
+
+            .slideInner {
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                justify-content: center;
+                min-height: 480px;
+                overflow: hidden;
+                width: 100%;
+
+                img {
+                    @include radius_common(20px);
+                }
+
+                .titleCard {
+                    @include flex_box_custom(center, center, 0);
+                    flex-direction: column;
+                    padding: 20px;
+
+                    .btnCard {
+                        @include flex_box_custom(center, center, 10px);
+                        position: relative;
+                        border-radius: 50px;
+                        border: none;
+                        background-color: #ffd643;
+                        transition: all ease-in-out 0.5s;
+                        height: 44px;
+                        margin-top: 13px;
+                        width: 220px;
+                        color: #333;
+                        font-weight: 700;
+                        font-size: 19px;
+                        overflow: hidden;
+                        cursor: pointer;
+
+                        .text {
+                            transition: transform 0.5s ease-in-out;
+                        }
+
+                        .icon {
+                            transition: transform 0.5s ease-in-out;
+                        }
+
+                        &:hover {
+                            background-color: $thr_color;
+                            color: #fff;
+
+                            .text {
+                                transform: translateX(-30px);
+                            }
+
+                            .icon {
+                                transform: translateX(130px);
+                            }
+                        }
+                    }
+
+                    .nameCard {
+                        color: #fff;
+                        font-size: 18px;
+                        font-weight: 600;
+                        font-weight: 500;
+                        line-height: 26px;
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+
+.mySwiper {
+    .swiper-button-prev,
+    .swiper-button-next {
+        background-color: #ffd643;
+        color: #333;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            background-color: #333;
+            color: #fff;
+            transform: scale(1.1);
+        }
+
+        &::after {
+            font-size: 14px;
+        }
+    }
+
+    .swiper-button-prev {
+        left: 10px;
+    }
+
+    .swiper-button-next {
+        right: 10px; /* Định vị nút next */
+    }
+}

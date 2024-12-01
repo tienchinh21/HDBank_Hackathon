@@ -1,0 +1,71 @@
+@import '@styles/mixin.module.scss';
+@import '@styles/variable.module.scss';
+
+
+.container {
+    position: relative;
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1000;
+        background-color: rgba(0, 0, 0, 0.3);
+        transition:background-color 0.3ms ease-in ;
+    }
+
+    @media only screen and (max-width: 600px) {
+        body {
+          background-color: lightblue;
+        }
+      }
+
+      @media only screen and (max-width: 1600px) {
+            .popupContainer {
+                width: 600px !important;
+                height: 500px !important;
+            }
+
+            .slidePopupContainer {
+                transform: translate(-50%, 20%) !important;
+            }
+      }
+    .popupContainer {
+        position: fixed;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -150%);
+        width: 900px;
+        height: 700px;
+        background-color: $white_color;
+        z-index: 1001;
+        border-radius: 50px;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+        padding: 20px;
+    }
+
+    .slidePopupContainer {
+        transform: translate(-50%, 40%);
+    }
+
+    .closeBox {
+        @include flex_box_custom(center, center, 0);
+        @include radius_common(50%);
+        position: absolute;
+        width: 35px;
+        height: 35px;
+        background-color: $white_color;
+        left: -60px;
+        top: 20px;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #ccc;
+        }
+    }
+
+}

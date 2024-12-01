@@ -1,0 +1,59 @@
+@import '@styles/mixin.module.scss';
+@import '@styles/variable.module.scss';
+
+.containerHeader {
+    @include flex_box_custom(space-between, center, 0);
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .btnBurger {
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+        margin-top: 20px;
+        margin-right: 20px;
+    }
+
+
+    .listNavigation {
+        @include flex_box_custom(center, center, 10px);
+
+        .link {
+        padding: 1rem 0.5rem;
+        }
+
+        .linkNavigation {
+            color : $secondary_color;
+            font-size: 21px;
+            font-weight: 400;
+            line-height: 29px;
+
+            &:hover {
+                color: $thr_color;
+            }
+        }
+    }
+
+    .searchIcon {
+        @include flex_box_custom(center, center);
+        background: #f9fafc;
+        border-radius: 50px;
+        cursor: pointer;
+        height: 42px;
+        width: 42px;
+    }
+
+    .userName {
+        @include flex_box_custom(center, center);
+        font-size: 16px;
+        font-weight: 500;
+    }
+}

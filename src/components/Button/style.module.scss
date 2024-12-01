@@ -1,0 +1,32 @@
+@import '@styles/mixin.module.scss';
+@import '@styles/variable.module.scss';
+
+button {
+    outline: none;
+    border: none;
+}
+
+.btn {
+    @include flex_box_custom(center, center, 0);
+    color: $primary_color;
+    padding: 6.5px 25px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    border-radius: 50px;
+    background-color: #e8e9ebd7;
+    margin: 0 10px;
+    cursor: pointer;
+
+    &:hover {
+        color: $thr_color;
+    }
+}
+
+.btnRegister {
+    background: linear-gradient(21.23deg, #f7a600, #fd0);
+}
+
+.wh {
+    width: 200px;
+    height: 45px;
+}

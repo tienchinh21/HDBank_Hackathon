@@ -1,0 +1,50 @@
+@import '@styles/mixin.module.scss';
+@import '@styles/variable.module.scss';
+
+.btnCard {
+    @include flex_box_custom(center, center, 10px);
+    position: relative;
+    border-radius: 50px;
+    border: none;
+    background-color: #ffd643;
+    transition: all ease-in-out 0.5s;
+    height: 44px;
+    margin-top: 13px;
+    width: 220px;
+    font-weight: 700;
+    font-size: 19px;
+    overflow: hidden;
+    cursor: pointer;
+
+
+    a {
+        @include flex_box_custom(center, center, 10px);
+        color: #333;
+        width: 100%;
+
+        &:hover {
+            color: #fff;
+        }
+    }
+
+    .text {
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .icon {
+        transition: transform 0.5s ease-in-out;
+    }
+
+    &:hover {
+
+        background-color: $thr_color;
+
+        .text {
+            transform: translateX(-30px);
+        }
+
+        .icon {
+            transform: translateX(130px);
+        }
+    }
+}
